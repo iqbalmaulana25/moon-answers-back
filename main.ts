@@ -19,6 +19,11 @@ function validateLine(text: string): void {
 
 validateLine(line);
 
-mkdirSync(outDir, { recursive: true });
-writeFileSync(`${outDir}/entry.txt`, line + "\n", "utf8");
+// Write the line (with its trailing newline) to the output file.
+function writeEntry(text: string): void {
+  mkdirSync(outDir, { recursive: true });
+  writeFileSync(`${outDir}/entry.txt`, text + "\n", "utf8");
+}
+
+writeEntry(line);
 console.log(line);
