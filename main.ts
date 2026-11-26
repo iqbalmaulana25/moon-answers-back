@@ -3,7 +3,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-const line = "You wish on me, howl at me, promise me you'll change — I've been watching for four billion years and you're all still texting your exes.";
+const line = "Four billion years of wishes, howls, and 2 a.m. promises — and not one of you has ever once wished me a night off.";
 
 // Gate guard: single line of 1-240 characters (counted with the trailing newline).
 if (line.includes("\n") || line.trim().length === 0 || line.length + 1 > 240) {
