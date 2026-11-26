@@ -15,4 +15,4 @@ cat /output/entry.txt
 
 ## Entry
 
-> You wish on me, howl at me, promise me you'll change — I've been watching for four billion years and you're all still texting your exes.
+> Four billion years of wishes, howls, and 2 a.m. promises — and not one of you has ever wished me a night off.
