@@ -11,9 +11,13 @@ const line =
   "Four billion years of wishes, howls, and 2 a.m. promises — and not one of you has ever wished me a night off.";
 
 // Gate guard: single line of 1-240 characters (counted with the trailing newline).
-if (line.includes("\n") || line.trim().length === 0 || line.length + 1 > 240) {
-  throw new Error(`entry line breaks the gate: ${line.length} characters`);
+function validateLine(text: string): void {
+  if (text.includes("\n") || text.trim().length === 0 || text.length + 1 > 240) {
+    throw new Error(`entry line breaks the gate: ${text.length} characters`);
+  }
 }
+
+validateLine(line);
 
 mkdirSync(outDir, { recursive: true });
 writeFileSync(`${outDir}/entry.txt`, line + "\n", "utf8");
